@@ -1,0 +1,17 @@
+body {
+    background-color:crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+
+.grid-box {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
