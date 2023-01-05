@@ -1,10 +1,24 @@
 /* Entire webpage */
 body {
-    background-color:crimson;
+    background-color:darkolivegreen;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* Grid size button */
+#grid-size-button {
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+#grid-size-button:hover {
+    background-color:darkgrey;
+    cursor: pointer;
 }
 
 /* Grid */
@@ -12,11 +26,48 @@ body {
     display: grid;
     width: 500px;
     height: 500px;
+    border: 5px solid black;
 }
 
 .grid-box {
     background-color: white;
     border: 1px solid black;
-    padding: 5px;
+    padding: 1px;
 }
+
+/* Color buttons */
+.color-button-container {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.color-button-container > button {
+    padding: 5px;
+    border-radius: 3px;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+.color-button-container > button:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+/* Reset button */
+#reset-button {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+#reset-button:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
 

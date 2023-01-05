@@ -38,8 +38,21 @@ function drawInBlack() {
     gridBoxes.forEach((gridBox) => {
     gridBox.addEventListener('mouseover', function(e) {
         e.target.style.background = "black";
+        e.target.style.cursor = "crosshair";
     });
     });
+}
+
+// Create function to draw in rainbow colors
+function drawInRainbow() {
+    const gridBoxes = document.querySelectorAll('.grid-box');
+    gridBoxes.forEach((gridBox) => {
+        gridBox.addEventListener('mouseover', function(e) {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            e.target.style.background = "#" + randomColor;
+            e.target.style.cursor = "crosshair";
+        })
+    })
 }
 
 // Initialize grid with 16x16 and black color
@@ -53,6 +66,32 @@ initializeGrid();
 
 // When button is cliked, prompt for new grid size
 gridSizeButton.onclick = function() {
-    gridSize = window.prompt('What size grid would you like?');
+    gridSize = window.prompt('Select grid size:');
     createGrid(gridSize);
+    drawInBlack();
 };
+
+// Add functionality for color changing buttons
+const blackButton = document.querySelector('#black-button');
+const rainbowButton = document.querySelector('#rainbow-button');
+
+blackButton.onclick = function () {
+    drawInBlack();
+}
+rainbowButton.onclick = function () {
+    drawInRainbow();
+}
+
+// Add reset button functionality
+function resetGrid() {
+    const gridBoxes = document.querySelectorAll('.grid-box');
+    gridBoxes.forEach((gridBox) => {
+        gridBox.style.backgroundColor = "white";
+    })
+}
+
+const resetButton = document.querySelector('#reset-button');
+
+resetButton.onclick = function () {
+    resetGrid();
+}
