@@ -1,9 +1,13 @@
+/* Entire webpage */
 body {
     background-color:crimson;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
+/* Grid */
 .grid-container {
     display: grid;
     width: 500px;
@@ -15,3 +19,4 @@ body {
     border: 1px solid black;
     padding: 5px;
 }
+
